@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook URL Automation</title>
+    <style>
+        body { 
+            width: 400px; 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+        }
+        textarea, input { 
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 5px;
+        }
+        button { 
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 10px;
+            background-color: #4267B2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #365899;
+        }
+        #summary, #errorLog { 
+            margin-top: 20px; 
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        #errorLog { 
+            display: none; 
+        }
+        h2 {
+            color: #4267B2;
+        }
+        #errorLogContent {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Facebook URL Automation</h2>
+    <input type="text" id="keywords" placeholder="Enter keywords (comma-separated)">
+    <textarea id="urlList" placeholder="Enter URLs, one per line" rows="5"></textarea>
+    <button id="startAutomation">Start Automation</button>
+    <div id="summary"></div>
+    <button id="showErrorLog">Toggle Error Log</button>
+    <div id="errorLog">
+        <h3>Error Log</h3>
+        <textarea id="errorLogContent" rows="10" readonly></textarea>
+        <button id="exportErrorLog">Export Error Log as CSV</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

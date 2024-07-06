@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook URL Automation",
+  "version": "1.0",
+  "description": "Automate liking posts on multiple Facebook URLs",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.facebook.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
